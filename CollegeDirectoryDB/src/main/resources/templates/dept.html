@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Departments Information</title>
+</head>
+<body>
+<div align="center">
+    <h1>Department List</h1>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Contact E-Mail</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="department : ${listDepts}">
+            <td th:text="${department.name}">Department Name</td>
+            <td th:text="${department.email}">Department Email</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
