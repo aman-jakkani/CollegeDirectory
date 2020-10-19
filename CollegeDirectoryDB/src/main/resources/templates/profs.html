@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Professors</title>
+</head>
+<body>
+    <h1>Professor List</h1>
+
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Professor ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="prof : ${listProfs}">
+            <td th:text="${prof.getId()}">Student ID</td>
+            <td th:text="${prof.getName()}">Name</td>
+            <td th:text="${prof.getEmail()}">Email</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
