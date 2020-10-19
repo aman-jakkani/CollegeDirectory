@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
@@ -14,6 +15,10 @@ public class Student {
     private Long id;
 
     private String name;
+
+    private String email;
+
+    private Date date;
 
     public String getName(){
         return name;
@@ -32,4 +37,19 @@ public class Student {
         this.id = newID;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
