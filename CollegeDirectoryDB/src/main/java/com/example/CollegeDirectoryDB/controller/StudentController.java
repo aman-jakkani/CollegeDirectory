@@ -15,11 +15,11 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @RequestMapping("/")
-    public String viewHomePage(Model model) {
+    @RequestMapping("/all")
+    public String viewAllPage(Model model) {
         List<Student> listStudents = studentService.listAll();
         model.addAttribute("listStudents", listStudents);
 
-        return "index";
+        return "all";
     }
 }

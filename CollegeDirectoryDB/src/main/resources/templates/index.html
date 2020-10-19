@@ -10,24 +10,9 @@
     <h1>Welcome to the University's Directory Database</h1>
     <div align="left">
         <a href="/dept">View Departments</a>
-        <a href="/mentor">Get Your Mentor</a>
-        <a href="/courses">Get Courses</a>
+        <a href="/all">View Student Directory</a>
     </div>
     <br/><br/>
-    <table border="1" cellpadding="10">
-        <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="student : ${listStudents}">
-            <td th:text="${student.getID()}">Student ID</td>
-            <td th:text="${student.getName()}">Name</td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 </body>
 </html>

@@ -10,6 +10,8 @@ public class Takes {
 
     private Long course_id;
 
+    private int grade;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getStudent_id() {
@@ -26,5 +28,13 @@ public class Takes {
 
     public void setCourse_id(Long course_id) {
         this.course_id = course_id;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
 }

@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "department")
 public class Departments {
 
     private String name;
@@ -16,7 +15,6 @@ public class Departments {
     private String email;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public String getName(){
         return name;
     }
