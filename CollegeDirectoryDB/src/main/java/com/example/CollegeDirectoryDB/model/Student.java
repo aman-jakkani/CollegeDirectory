@@ -1,9 +1,5 @@
 package com.example.CollegeDirectoryDB.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,7 +14,7 @@ public class Student {
 
     private String email;
 
-    private Date date;
+    private Date birthday;
 
     public String getName(){
         return name;
@@ -29,27 +25,27 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long getID(){
+    public Long getId(){
         return id;
     }
 
-    public void setID(Long newID){
+    public void setId(Long newID){
         this.id = newID;
-    }
-
-    public Date getDate() {
-        return date;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 }

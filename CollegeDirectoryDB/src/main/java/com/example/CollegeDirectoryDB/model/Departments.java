@@ -15,6 +15,7 @@ public class Departments {
     private String email;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public String getName(){
         return name;
     }

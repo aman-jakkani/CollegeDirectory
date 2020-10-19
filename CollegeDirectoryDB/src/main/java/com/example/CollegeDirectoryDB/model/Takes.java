@@ -6,14 +6,15 @@ import javax.persistence.*;
 @Table(name = "takes")
 public class Takes {
 
+    private Long id;
+
     private Long student_id;
 
     private Long course_id;
 
     private int grade;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     public Long getStudent_id() {
         return student_id;
     }
@@ -36,5 +37,14 @@ public class Takes {
 
     public void setGrade(int grade) {
         this.grade = grade;
+    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

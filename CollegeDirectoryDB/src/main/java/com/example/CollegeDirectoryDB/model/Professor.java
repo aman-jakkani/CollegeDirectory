@@ -9,7 +9,7 @@ public class Professor {
     private Long id;
     private String name;
     private String email;
-    private String dept;
+    private String department_id;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,11 +35,11 @@ public class Professor {
         this.email = email;
     }
 
-    public String getDept() {
-        return dept;
+    public String getDepartment_id() {
+        return department_id;
     }
 
-    public void setDept(String dept) {
-        this.dept = dept;
+    public void setDepartment_id(String department_id) {
+        this.department_id = department_id;
     }
 }

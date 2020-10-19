@@ -9,7 +9,7 @@ public class Course {
 
     private Long id;
 
-    private String dept;
+    private String department_id;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,11 +19,11 @@ public class Course {
         this.id = id;
     }
 
-    public String getDept() {
-        return dept;
+    public String getDepartment_id() {
+        return department_id;
     }
 
-    public void setDept(String dept) {
-        this.dept = dept;
+    public void setDepartment_id(String department_id) {
+        this.department_id = department_id;
     }
 }

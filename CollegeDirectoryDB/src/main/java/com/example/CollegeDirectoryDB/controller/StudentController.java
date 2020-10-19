@@ -19,7 +19,6 @@ public class StudentController {
     public String viewAllPage(Model model) {
         List<Student> listStudents = studentService.listAll();
         model.addAttribute("listStudents", listStudents);
-
         return "all";
     }
 }

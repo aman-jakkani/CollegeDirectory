@@ -6,14 +6,13 @@ import javax.persistence.*;
 @Table(name = "teaches")
 public class Teaches {
 
+    private Long id;
+
     private Long course_id;
 
     private Long prof_id;
 
-    private int capacity;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getCourse_id() {
         return course_id;
     }
@@ -29,12 +28,14 @@ public class Teaches {
     public void setProf_id(Long prof_id) {
         this.prof_id = prof_id;
     }
-
-    public int getCapacity() {
-        return capacity;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long getId() {
+        return id;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setId(Long id) {
+        this.id = id;
     }
 }
