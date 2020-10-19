@@ -10,17 +10,17 @@ import javax.persistence.*;
 @Entity
 public class Departments {
 
-    private String name;
+    private String id;
 
     private String email;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public String getName(){
-        return name;
+    public String getId(){
+        return id;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String name) {
+        this.id = name;
     }
 
     public void setEmail(String email){

@@ -16,9 +16,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="departments : ${listDept}">
-            <td th:text="${departments.getName()}">Department Name</td>
-            <td th:text="${departments.getEmail()}">Department Email</td>
+        <tr th:each="dept : ${listDept}">
+            <td th:text="${dept.getId()}">Department Name</td>
+            <td th:text="${dept.getEmail()}">Department Email</td>
         </tr>
         </tbody>
     </table>

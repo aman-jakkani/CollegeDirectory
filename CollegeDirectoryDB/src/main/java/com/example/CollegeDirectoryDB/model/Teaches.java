@@ -10,7 +10,7 @@ public class Teaches {
 
     private Long course_id;
 
-    private Long prof_id;
+    private Long professor_id;
 
 
     public Long getCourse_id() {
@@ -21,14 +21,14 @@ public class Teaches {
         this.course_id = course_id;
     }
 
-    public Long getProf_id() {
-        return prof_id;
+    public Long getProfessor_id() {
+        return professor_id;
     }
 
-    public void setProf_id(Long prof_id) {
-        this.prof_id = prof_id;
+    public void setProfessor_id(Long prof_id) {
+        this.professor_id = prof_id;
     }
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
