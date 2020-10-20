@@ -14,7 +14,6 @@ public class Student {
 
     private String email;
 
-    private Date birthday;
 
     public String getName(){
         return name;
@@ -41,11 +40,4 @@ public class Student {
         this.email = email;
     }
 
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
 }
