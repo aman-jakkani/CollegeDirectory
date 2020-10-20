@@ -11,9 +11,7 @@ college_db.
 - <b>Make sure</b> you go to application.properties file and input your local SQL server information.
 Everything should be unchanged except you need to add your username and password to this properties file. Change
 the 3306 in the datasource url if you're MySQL server is on another port.
-- Also navigate to pom.xml file on IntelliJ (if using) and make sure all Maven dependencies are installed. This step is automatic 
-on IntelliJ.
-- If using IntelliJ, click on Run. Else, navigate to the project folder in terminal and type in the command "./mnvw spring-boot:run".
+- If using IntelliJ, click on Run. Else, navigate to the project folder which is CollegeDirectoryDB in terminal and type in the command "./mnvw spring-boot:run".
 This should start compiling and building the project, and once everything is built, navigate to "localhost:8080" to start using the application!
 
 Data Generation Source: filldb.info
