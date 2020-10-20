@@ -5,21 +5,28 @@
     <title>Student Directory</title>
 </head>
 <body>
-<table border="1" cellpadding="10">
-    <thead>
-    <tr>
-        <th>Student ID</th>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="student : ${listStudents}">
-        <td th:text="${student.getID()}">Student ID</td>
-        <td th:text="${student.getName()}">Name</td>
-        <td th:text="${student.getEmail()}">Email</td>
-    </tr>
-    </tbody>
-</table>
+<div>
+<div align="center">
+<h1>All Students</h1><br/>
+<a href="/">Return Home</a><br/>
+</div>
+    <div>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${listStudents}">
+            <td th:text="${student.getId()}">Student ID</td>
+            <td th:text="${student.getName()}">Name</td>
+            <td th:text="${student.getEmail()}">Email</td>
+        </tr>
+        </tbody>
+</table></div>
+</div>
 </body>
 </html>

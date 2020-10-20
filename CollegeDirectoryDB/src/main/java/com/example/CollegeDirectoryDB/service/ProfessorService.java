@@ -17,4 +17,8 @@ public class ProfessorService {
         return repo.findAll();
     }
 
+    public String get(Long professor_id) { return repo.getName(professor_id);}
+
+    public List<String> getMentees(Long professor_id) { return repo.getMentees(professor_id);}
+
 }

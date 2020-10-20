@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Mentees</title>
+</head>
+<body>
+<div>
+    <div align="center">
+        <h1>Mentee List for</h1><h1 th:text="${listMentees.getName()}"></h1>
+        <a href="/">Return Home</a>
+    </div>
+    <br/><br/>
+    <div align="center">
+        <table border="1" cellpadding="10">
+            <thead>
+            <tr>
+                <th>Student</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="mentee : ${listMentees.getMentees()}">
+                <td th:text="${mentee}">Student Name</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,10 +1,13 @@
 package com.example.CollegeDirectoryDB.controller;
 
+import com.example.CollegeDirectoryDB.model.Mentor;
 import com.example.CollegeDirectoryDB.model.Professor;
+import com.example.CollegeDirectoryDB.model.Student;
 import com.example.CollegeDirectoryDB.service.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -20,5 +23,16 @@ public class ProfessorController {
         List<Professor> professors = service.listAll();
         model.addAttribute("listProfs", professors);
         return "profs";
+    }
+
+    @RequestMapping("/mentees/{professor_id}")
+    public String viewMenteesPage(@PathVariable Long professor_id, Model model){
+        String profName = service.get(professor_id);
+        List<String> mentees = service.getMentees(professor_id);
+        Mentor m = new Mentor();
+        m.setName(profName);
+        m.setMentees(mentees);
+        model.addAttribute("listMentees", m);
+        return "mentees";
     }
 }
