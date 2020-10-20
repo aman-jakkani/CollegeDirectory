@@ -20,5 +20,7 @@ public class DepartmentsService {
         return repo.findAll();
     }
 
+    public int getCourseCount(String department_id){ return repo.getCourseCount(department_id);}
+
 
 }

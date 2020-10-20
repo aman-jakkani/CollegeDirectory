@@ -28,6 +28,8 @@ public class StudentService {
         repo.save(student);
     }
 
+    public Float getGpa(Long student_id){ return repo.getGpa(student_id);}
+
     public String getName(long id) {
         return repo.getName(id);
     }

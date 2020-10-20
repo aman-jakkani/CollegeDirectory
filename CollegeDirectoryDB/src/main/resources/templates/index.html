@@ -2,11 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
     <title>College Directory Student Manager</title>
 </head>
 <body>
-<div align="center">
+<div class="container" align="center">
+
     <h1>Welcome to the University's Directory Database</h1>
     <br/>
     <div>
@@ -18,7 +22,8 @@
     <div>
         <h2>Instructions</h2>
         <p>Copy paste the URL given for each functionality, including your input as a parameter wherever you see {}.</p>
-    </div><br/>
+    </div><br/><hr/>
+    <div><h2>For Students</h2></div><br/>
     <div>
         <h2>Is my professor tough or not?</h2>
         <p>Search a professor's average grade! - http://localhost:8080/toughOrNot/{professor_id}</p>
@@ -28,9 +33,16 @@
         <p>Get a table with your sponsors here! - http://localhost:8080/sponsors/{student_id}</p>
     </div><br/>
     <div>
+        <h2>What is my GPA?</h2>
+        <p>Find out your GPA here! - http://localhost:8080/gpa/{student_id} </p>
+    </div><br/>
+    <hr/>
+    <div><h2>For Professors</h2></div><br/>
+    <div>
         <h2>I am a mentor! Who are my mentees?</h2>
         <p>As a professor, you can get a table with your student mentees here! - http://localhost:8080/mentees/{professor_id} </p>
-    </div>
+    </div><br/>
+
 </div>
 </body>
 </html>

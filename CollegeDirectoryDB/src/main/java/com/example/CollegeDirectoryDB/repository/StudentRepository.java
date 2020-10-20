@@ -16,4 +16,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 
     @Query("select s.name from Student s where s.id = ?1")
     String getName(Long student_id);
+
+    @Query("select avg(t.grade) from Takes t where t.student_id=?1")
+    Float getGpa(Long student_id);
 }

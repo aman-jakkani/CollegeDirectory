@@ -32,4 +32,12 @@ public class StudentController {
         model.addAttribute("listSponsors", m);
         return "sponsors";
     }
+
+    @RequestMapping("/gpa/{student_id}")
+    public String viewGpa(@PathVariable Long student_id, Model model){
+        Float gpa = studentService.getGpa(student_id);
+        gpa = (gpa / 20) - 1;
+        model.addAttribute("gpa", gpa);
+        return "gpa";
+    }
 }
