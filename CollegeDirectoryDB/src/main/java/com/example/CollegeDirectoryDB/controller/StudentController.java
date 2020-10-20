@@ -21,4 +21,5 @@ public class StudentController {
         model.addAttribute("listStudents", listStudents);
         return "all";
     }
+
 }

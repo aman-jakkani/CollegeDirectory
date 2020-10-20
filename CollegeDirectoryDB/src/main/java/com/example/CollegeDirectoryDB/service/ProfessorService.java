@@ -16,4 +16,5 @@ public class ProfessorService {
     public List<Professor> listAll(){
         return repo.findAll();
     }
+
 }
