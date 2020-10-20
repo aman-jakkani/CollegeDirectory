@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Sponsors</title>
+</head>
+<body>
+<div>
+    <div align="center">
+        <h1>Sponsor List for</h1><h1 th:text="${listSponsors.getMyName()}"></h1>
+        <a href="/">Return Home</a>
+    </div>
+    <br/><br/>
+    <div align="center">
+        <table border="1" cellpadding="10">
+            <thead>
+            <tr>
+                <th>Sponsor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="sp : ${listSponsors.getMySponsors()}">
+                <td th:text="${sp}">Sponsor Name</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

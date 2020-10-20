@@ -8,7 +8,7 @@ public class Sponsorships {
 
     private Long id;
 
-    private String sponsor_id;
+    private Long sponsor_id;
 
     private String department_id;
 
@@ -24,7 +24,7 @@ public class Sponsorships {
         return department_id;
     }
 
-    public String getSponsor_id() {
+    public Long getSponsor_id() {
         return sponsor_id;
     }
 
@@ -32,7 +32,7 @@ public class Sponsorships {
         this.department_id = department_id;
     }
 
-    public void setSponsor_id(String sponsor_id) {
+    public void setSponsor_id(Long sponsor_id) {
         this.sponsor_id = sponsor_id;
     }
 }

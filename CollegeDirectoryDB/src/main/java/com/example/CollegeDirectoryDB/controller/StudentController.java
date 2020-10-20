@@ -1,5 +1,6 @@
 package com.example.CollegeDirectoryDB.controller;
 
+import com.example.CollegeDirectoryDB.model.MySponsor;
 import com.example.CollegeDirectoryDB.model.Student;
 import com.example.CollegeDirectoryDB.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,4 +23,13 @@ public class StudentController {
         return "all";
     }
 
+    @RequestMapping("/sponsors/{student_id}")
+    public String viewSponsors(@PathVariable Long student_id, Model model){
+        List<String> sponsors = studentService.listSponsors(student_id);
+        MySponsor m = new MySponsor();
+        m.setMyName(studentService.getName(student_id));
+        m.setMySponsors(sponsors);
+        model.addAttribute("listSponsors", m);
+        return "sponsors";
+    }
 }

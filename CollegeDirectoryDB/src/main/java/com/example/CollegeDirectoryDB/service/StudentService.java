@@ -20,12 +20,16 @@ public class StudentService {
     public List<Student> listAll(){
         return repo.findAll();
     }
+
+    public List<String> listSponsors(Long student_id){
+        return repo.findSponsors(student_id);
+    }
     public void save(Student student) {
         repo.save(student);
     }
 
-    public Student get(long id) {
-        return repo.findById(id).get();
+    public String getName(long id) {
+        return repo.getName(id);
     }
 
     public void delete(long id) {
