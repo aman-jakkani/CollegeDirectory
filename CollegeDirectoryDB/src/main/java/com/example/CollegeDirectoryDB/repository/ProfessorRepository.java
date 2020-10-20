@@ -13,4 +13,7 @@ public interface ProfessorRepository extends JpaRepository<Professor, Long> {
     String getName(Long professor_id);
     @Query("select s.name from Mentorships m join Student s on m.student_id = s.id where m.professor_id = ?1")
     List<String> getMentees(Long professor_id);
+
+    @Query("select s.name from Sponsor s join Sponsorships x on s.id = x.sponsor_id where s.level='Platinum' and x.department_id = (select p.department_id from Professor p where p.id = ?1)")
+    List<String> getPlats(Long professor_id);
 }

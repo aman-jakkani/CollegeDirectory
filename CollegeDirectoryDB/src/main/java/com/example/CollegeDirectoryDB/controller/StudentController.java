@@ -40,4 +40,12 @@ public class StudentController {
         model.addAttribute("gpa", gpa);
         return "gpa";
     }
+
+    @RequestMapping("/busy/{student_id}")
+    public String viewBusy(@PathVariable Long student_id, Model model){
+        int courses = studentService.getSchedule(student_id);
+        //System.out.println(courses);
+        model.addAttribute("busyness", courses);
+        return "busy";
+    }
 }

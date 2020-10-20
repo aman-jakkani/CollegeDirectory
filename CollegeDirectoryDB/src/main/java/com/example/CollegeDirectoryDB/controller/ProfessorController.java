@@ -35,4 +35,11 @@ public class ProfessorController {
         model.addAttribute("listMentees", m);
         return "mentees";
     }
+
+    @RequestMapping("/plats/{professor_id}")
+    public String viewPlatinums(@PathVariable Long professor_id, Model model){
+        List<String> plats = service.getPlats(professor_id);
+        model.addAttribute("platinum", plats);
+        return "plats";
+    }
 }

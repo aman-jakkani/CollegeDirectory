@@ -21,4 +21,6 @@ public class ProfessorService {
 
     public List<String> getMentees(Long professor_id) { return repo.getMentees(professor_id);}
 
+    public List<String> getPlats(Long professor_id) { return repo.getPlats(professor_id);}
+
 }
